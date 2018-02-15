@@ -13,10 +13,10 @@ export class HomePage {
   }
 
   signIn() {
-    this.navCtrl.push(LoginPage);     // go to the login page
+    this.navCtrl.push(LoginPage);     // goes to the login page
   }
 
   register() {
-    this.navCtrl.push(RegisterPage);     // go to the register page
+    this.navCtrl.push(RegisterPage);     // goes to the register page
   }
 }

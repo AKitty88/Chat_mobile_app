@@ -11,8 +11,6 @@ import { Storage } from '@ionic/storage';
 })
 
 export class LoginPage {
-  // @ViewChild('username') uname;
-  // @ViewChild('password') pword;
   username: string= '';
   password: string= '';
 
@@ -40,21 +38,16 @@ export class LoginPage {
   signInUser() {
     this.storage.set('username', this.username);
 
-    // if(/^[a-zA-Z0-9]+$/.test(this.uname.value))
     this.fire.auth.signInWithEmailAndPassword(this.username + '@domain.invalid', this.password).then(data=> {
     console.log('got data', this.fire.auth.currentUser);
     this.alert('Success! You\'re logged in');
 
     this.navCtrl.push(ChatPage, {username: this.username});
-    // this.navCtrl.setRoot(ChatPage);
 
     }).catch(error => {
       console.log('got an error', error);
       this.alert(error.message);
     })
     console.log('Would sign in with ', this.username, this.password)
-    // else {this.alert('Error, Invalid username');}
   }
 }
-
-// admin55@gmail.com

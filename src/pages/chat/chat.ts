@@ -19,22 +19,12 @@ export class ChatPage {
   messages: object[]= [];
 
   constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
-      //this.storage.get('username').then((val) => {
-      //if (val != null) {
-      //  this.username= val;
-      //}
-    //});
-
     this.obsRef = this.db.object('/chat');
     this.obsToData = this.obsRef.valueChanges().subscribe( data => {
       var data_array= $.map(data, function(value, index) {            // converts data (object) to array
         return [value];
       });
 
-      //console.log(data);
-      //data_array.map(elem => {
-      //  this.messages.push(elem);
-      //})
       this.messages= data_array;
     });
   }
@@ -59,15 +49,6 @@ export class ChatPage {
   }
 
   ionViewDidLoad() {
-    // let username= '';
-
-    //this.storage.get('username').then((val) => {            // asyncronous
-      //if (val != null) {
-        //username= val;
-        //console.log('ionViewDidLoad ChatPage', username);
-      //}
-    //});
-
     this.username= this.navParams.get('username');
     //this.username= this.navParams.data;
     console.log('ionViewDidLoad ChatPage', this.username);
