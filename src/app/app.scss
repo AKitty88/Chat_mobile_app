@@ -1,0 +1,44 @@
+// http://ionicframework.com/docs/theming/
+
+
+/* Start - Front end design */
+
+/* .innerMessage {
+  background-color: none !important;
+  color: #f8f8f8 !important;
+}
+
+  page-chat .innerMessage {
+    background-color: #dfe8f2 !important;
+    color: #707582 !important;
+  } */
+
+/*  .special .innerMessage {
+    background-color: none !important;
+    color: #f8f8f8 !important;
+  }*/
+
+.header {
+  background: #c90000; /* Old browsers */
+  background: -moz-linear-gradient(top,  #c90000 0%, #b40000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #c90000 0%,#b40000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #c90000 0%,#b40000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c90000', endColorstr='#b40000',GradientType=0 ); /* IE6-9 */
+}
+
+/* End - Front end design */
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
